@@ -1,0 +1,38 @@
+{
+    "name": "confrariaweb/laravel-crm",
+    "version": "dev-master",
+    "description": "Motor para todos os componentes",
+    "keywords": [
+        "crm",
+        "framework",
+        "laravel"
+    ],
+    "license": "MIT",
+    "type": "package",
+    "authors": [
+        {
+            "name": "Rafael Zingano",
+            "email": "confrariaweb@gmail.com"
+        }
+    ],
+    "require": {
+        "confrariaweb/laravel-entrust": "dev-master",
+        "confrariaweb/laravel-historic": "dev-master",
+        "confrariaweb/laravel-option": "dev-master",
+        "confrariaweb/laravel-user": "dev-master",
+        "confrariaweb/laravel-vendor": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "ConfrariaWeb\\Crm\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ConfrariaWeb\\Crm\\Providers\\CrmServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev"
+}
