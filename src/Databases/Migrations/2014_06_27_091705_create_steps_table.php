@@ -39,7 +39,7 @@ class CreateStepsTable extends Migration
             $table->primary(['step_id', 'user_id']);
         });
 
-        Schema::create('crm_step_role', function (Blueprint $table) {
+        Schema::create('crm_role_step', function (Blueprint $table) {
             $table->unsignedBigInteger('step_id');
             $table->unsignedBigInteger('role_id');
 
