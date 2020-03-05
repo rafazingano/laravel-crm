@@ -64,7 +64,7 @@ class CreateStepsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('crm_step_role');
+        Schema::dropIfExists('crm_role_step');
         Schema::dropIfExists('crm_step_user');
         Schema::dropIfExists('crm_steps');
     }
