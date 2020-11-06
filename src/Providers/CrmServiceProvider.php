@@ -2,9 +2,9 @@
 
 namespace ConfrariaWeb\Crm\Providers;
 
-use ConfrariaWeb\Crm\Contracts\StepContract;
-use ConfrariaWeb\Crm\Repositories\StepRepository;
-use ConfrariaWeb\Crm\Services\StepService;
+use ConfrariaWeb\Crm\Contracts\LeadContract;
+use ConfrariaWeb\Crm\Repositories\LeadRepository;
+use ConfrariaWeb\Crm\Services\LeadService;
 use Illuminate\Support\ServiceProvider;
 
 class CrmServiceProvider extends ServiceProvider
@@ -13,20 +13,19 @@ class CrmServiceProvider extends ServiceProvider
     public function boot()
     {
 
-        $this->loadRoutesFrom(__DIR__ . '/../Routes/api.php');
+        //$this->loadRoutesFrom(__DIR__ . '/../Routes/api.php');
         $this->loadRoutesFrom(__DIR__ . '/../Routes/web.php');
-        $this->loadMigrationsFrom(__DIR__ . '/../Databases/Migrations');
-        //$this->loadTranslationsFrom(__DIR__ . '/../Translations', 'crm');
+        $this->loadMigrationsFrom(__DIR__ . '/../../databases/Migrations');
         $this->loadViewsFrom(__DIR__ . '/../Views', 'crm');
-        $this->publishes([__DIR__ . '/../../config/cw_crm.php' => config_path('cw_crm.php')], 'cw_crm');
+        //$this->publishes([__DIR__ . '/../../config/cw_crm.php' => config_path('cw_crm.php')], 'config');
 
     }
 
     public function register()
     {
-        $this->app->bind(StepContract::class, StepRepository::class);
-        $this->app->bind('CrmStepService', function ($app) {
-            return new StepService($app->make(StepContract::class));
+        $this->app->bind(LeadContract::class, LeadRepository::class);
+        $this->app->bind('LeadService', function ($app) {
+            return new LeadService($app->make(LeadContract::class));
         });
     }
 

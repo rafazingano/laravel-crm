@@ -1,7 +1,7 @@
 {
     "name": "confrariaweb/laravel-crm",
     "version": "dev-master",
-    "description": "Motor para todos os componentes",
+    "description": "Package Customer Relationship Management - CRM",
     "keywords": [
         "crm",
         "framework",
@@ -16,15 +16,14 @@
         }
     ],
     "require": {
-        "confrariaweb/laravel-entrust": "dev-master",
-        "confrariaweb/laravel-historic": "dev-master",
-        "confrariaweb/laravel-option": "dev-master",
+        "confrariaweb/laravel-acl": "dev-master",
         "confrariaweb/laravel-user": "dev-master",
         "confrariaweb/laravel-vendor": "dev-master"
     },
     "autoload": {
         "psr-4": {
-            "ConfrariaWeb\\Crm\\": "src"
+            "ConfrariaWeb\\Crm\\": "src",
+            "ConfrariaWeb\\Crm\\Databases\\Seeds\\": "databases/Seeds"
         }
     },
     "extra": {

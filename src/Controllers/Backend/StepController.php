@@ -1,6 +1,6 @@
 <?php
 
-namespace ConfrariaWeb\Crm\Controllers;
+namespace ConfrariaWeb\Crm\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use ConfrariaWeb\Crm\Requests\StoreStepRequest;

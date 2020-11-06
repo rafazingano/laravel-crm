@@ -19,7 +19,7 @@ class Step extends Model
 
     public function users()
     {
-        return $this->belongsToMany('App\User', 'crm_step_user');
+        return $this->belongsToMany('App\Models\User', 'crm_step_user');
     }
 
 }
