@@ -1,6 +1,6 @@
 {
     "name": "confrariaweb/laravel-crm",
-    "version": "dev-master",
+    "version": "1.0.0",
     "description": "Package Customer Relationship Management - CRM",
     "keywords": [
         "crm",
@@ -16,9 +16,9 @@
         }
     ],
     "require": {
-        "confrariaweb/laravel-acl": "dev-master",
-        "confrariaweb/laravel-user": "dev-master",
-        "confrariaweb/laravel-vendor": "dev-master"
+        "confrariaweb/laravel-acl": "1.0.0",
+        "confrariaweb/laravel-user": "1.0.0",
+        "confrariaweb/laravel-vendor": "1.0.0"
     },
     "autoload": {
         "psr-4": {
